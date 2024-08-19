@@ -1,0 +1,97 @@
+body{
+    background-color: #000;
+    justify-content: center;
+    display: flex;
+}
+
+.lights{
+    --color-1: 255, 249, 82;
+    --color-2: 0, 234, 255;
+    --color-3: 247, 0, 148;
+    position: relative;
+    display: flex;
+    flex-flow: wrap;
+    gap: 30px 40px;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.lights li{
+    position: relative;
+    content: "";
+    background-color: red;
+    height: 30px;
+    width: 15px;
+    border-radius: 50%;
+    list-style: none;
+    flex: none;
+}
+
+.lights li:before{
+    background-color: #222;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 100%;
+    content: "";
+}
+
+.lights li:after{
+    position: absolute;
+    top:-5px;
+    left: 50%;
+    width:54px;
+    height: 5px;
+    content: "";
+    z-index: -1;
+    border-radius: 100%;
+    border-bottom: 1px solid #222;
+}
+
+.lights li:last-child:after {
+    display: none;
+}
+
+.lights li{
+    background-color: rgba(var(--color-1),1);
+    box-shadow: 0 5px 24px 3px rgba(var(--color-1),1);
+    animation: lighting-1 1.25s infinite linear;
+}
+
+.lights li:nth-child(odd){
+    background-color: rgba(var(--color-2),1);
+    box-shadow:0 5px 24px 3px rgba(var(--color-2),1) ;
+    animation: ligthing-2 1.5s infinite linear;
+}
+
+.lights li:nth-child(4n+2){
+    background-color: rgba(var(--color-3),1);
+    box-shadow: 0 5px 24px 3px rgba(var(--color-3),1);
+    animation: lighting-3 1.25s infinite linear;
+    animation-delay: 1.25s;
+}
+
+@keyframes lighting-1 {
+    50%{
+        background-color: rgba(var(--color-1),0.25);
+        box-shadow: 0 5px 24px 3px rgba(var(--color-1),0.25);
+    }
+}
+
+@keyframes lighting-2 {
+    50%{
+        background-color: rgba(var(--color-2),0.25);
+        box-shadow: 0 5px 24px 3px rgba((var(--color-2),1));
+    }
+}
+
+@keyframes lighting-3 {
+    50%{
+        background-color: rgba(var(--color-3),0.25);
+        box-shadow: 0 5px 24px 3px rgba(var(--color-3),0.25);
+    }
+
+}
