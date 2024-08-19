@@ -1,7 +1,14 @@
+@font-face {
+    font-family: "stranger";
+    src: url("strangerThingsFont.ttf");
+}
 body{
+    font-family: "stranger", sans-serif;
     background-color: #000;
     justify-content: center;
     display: flex;
+    width: 96vw;
+    color: white;
 }
 
 .lights{
@@ -11,7 +18,7 @@ body{
     position: relative;
     display: flex;
     flex-flow: wrap;
-    gap: 30px 40px;
+    gap: 50px 50px;
     justify-content: center;
     padding: 30px 0;
 }
@@ -19,11 +26,12 @@ body{
 .lights li{
     position: relative;
     content: "";
-    height: 30px;
-    width: 15px;
+    height: 50px;
+    width: 25px;
     border-radius: 50%;
     list-style: none;
     flex: none;
+    text-align: center;
 }
 
 .lights li:before{
@@ -42,7 +50,7 @@ body{
     position: absolute;
     top:-5px;
     left: 50%;
-    width:54px;
+    width:70px;
     height: 5px;
     content: "";
     z-index: -1;
@@ -54,43 +62,45 @@ body{
     display: none;
 }
 
+.lights li p{
+    position: relative;
+    top:40px;
+    text-align: center;
+}
+
 .lights li{
-    background-color: rgba(var(--color-1),1);
-    box-shadow: 0 5px 24px 3px rgba(var(--color-1),1);
-    animation: lighting-1 1.25s infinite linear;
+    background-color: rgba(var(--color-1),0.25);
+    box-shadow: 0 5px 24px 3px rgba(var(--color-1),0.25);
 }
 
 .lights li:nth-child(odd){
-    background-color: rgba(var(--color-2),1);
-    box-shadow:0 5px 24px 3px rgba(var(--color-2),1) ;
-    animation: ligthing-2 1.5s infinite linear;
+    background-color: rgba(var(--color-2),0.25);
+    box-shadow:0 5px 24px 3px rgba(var(--color-2),0.25) ;
 }
 
 .lights li:nth-child(4n+2){
-    background-color: rgba(var(--color-3),1);
-    box-shadow: 0 5px 24px 3px rgba(var(--color-3),1);
-    animation: lighting-3 1.25s infinite linear;
+    background-color: rgba(var(--color-3),0.25);
+    box-shadow: 0 5px 24px 3px rgba(var(--color-3),0.25);
     animation-delay: 1.25s;
 }
 
 @keyframes lighting-1 {
     50%{
-        background-color: rgba(var(--color-1),0.25);
-        box-shadow: 0 5px 24px 3px rgba(var(--color-1),0.25);
+        background-color: rgba(var(--color-1),1);
+        box-shadow: 0 5px 24px 3px rgba(var(--color-1),1);
     }
 }
 
-@keyframes ligthing-2 {
+@keyframes lighting-2 {
     50%{
-        background-color: rgba(var(--color-2),0.25);
-        box-shadow: 0 5px 24px 3px rgba(var(--color-2),0.25);
+        background-color: rgba(var(--color-2),1);
+        box-shadow: 0 5px 24px 3px rgba(var(--color-2),1);
     }
 }
 
 @keyframes lighting-3 {
     50%{
-        background-color: rgba(var(--color-3),0.25);
-        box-shadow: 0 5px 24px 3px rgba(var(--color-3),0.25);
+        background-color: rgba(var(--color-3),1);
+        box-shadow: 0 5px 24px 3px rgba(var(--color-3),1);
     }
-
 }
