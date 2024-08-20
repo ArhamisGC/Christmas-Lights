@@ -8,12 +8,12 @@ This project is a fun and interactive web page that simulates the iconic wall fr
 This project is built using the following technologies:
 
 - HTML: For structuring the web page elements.
-- CSS: For styling the wall and the light bulbs to create an authentic Stranger Things atmosphere.
+- CSS: For styling the light bulbs to create an authentic Stranger Things atmosphere.
 - JavaScript: For detecting key presses and illuminating the corresponding light bulbs.
 ## 🧑‍💻 How It Works
 - Open the Web Page: Load the project in your browser.
 - Start Typing: As you type on your keyboard, the corresponding light bulb on the wall will illuminate, displaying the letter you pressed.
-Enjoy the Show: Watch as the wall comes to life with your input, just like in Stranger Things!
+- Enjoy the Show: Watch as the wall comes to life with your input, just like in Stranger Things!
 
 ## 🌐 Use it Online
 You can use it directly in your browser by visiting the following URL:
