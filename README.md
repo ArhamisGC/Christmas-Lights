@@ -18,4 +18,4 @@ Enjoy the Show: Watch as the wall comes to life with your input, just like in St
 ## 🌐 Use it Online
 You can use it directly in your browser by visiting the following URL:
 
-[Stranger Things Wall](https://arhamisgc.github.io/Christmas-Lights/)
+[Stranger Things Wall](https://arhamisgc.github.io/Stranger-Things-Wall/)
